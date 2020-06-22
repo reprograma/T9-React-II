@@ -1,52 +1,68 @@
-# React II - Conteúdo de aula
------------------
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Documentação Oficial React
+## Available Scripts
 
-[Documentação Oficial React - Português BR](https://pt-br.reactjs.org/)
+In the project directory, you can run:
 
---------------
+### `yarn start`
 
-## O que é SPA?
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-> Uma aplicação WEB onde a maioria das interações dos usuários acontecem em uma única página. Essa página contém todas as views que precisamos para nossa aplicação e carrega os dados do backend. 
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
 
-Em relação aos websites tradicionais, SPA's possuem menos refresh, já que podemos renderizar múltiplas views nelas. As aplicações React possuem somente uma página HTML (public/index.html) e o framework se encarrega de carregar os "pedaços" de html (templates) neste html principal de acordo com a interação do usuário.
+### `yarn test`
 
+Launches the test runner in the interactive watch mode.<br />
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-## Reutilização de Componentes e Parametrização
+### `yarn build`
 
-As aplicações React são construídas através da combinação de múltiplos componentes. Essa estrutura pode ser representada pelo que chamamos de Árvore de Componentes, que possui um componente principal (geralmente App.js) de onde partem todos os demais (infinitamente). Tais componentes podem possuir states, e a depender do state a interface do componente é, ou não, alterada. As views são então compostas por componentes diversos e mudam de acordo com seus states; estes, por sua vez, são alterados por fatores como alteração nos dados recebidos ou enviados pelo/para o backend e as interaçÕes do usuário.
+Builds the app for production to the `build` folder.<br />
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-Podemos passar parâmetros - dados - para definir as características dos componentes e renderizá-los de formas diferente durante os diversos estados da aplicação.
+The build is minified and the filenames include the hashes.<br />
+Your app is ready to be deployed!
 
-## Rotas e React Router
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-A biblioteca de rotas do React é composta por três packages: react-router, react-router-dom e react-router-native. Ela serve para lidar com o redirecionamento e renderização de rotas da nossa aplicação. Para aplicações web utilizamos o react-router-dom e para mobile o react-router-native, já o react-router é o package core dessa biblioteca. Para instalá-la no nosso app usaremos o seguinte cmd: 
+### `yarn eject`
 
-```javascript
-npm install react-router-dom
-```
-### Router
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-Um Router permite que a aplicação navegue entre diferentes componentes, mudando a URL, modificando o browser history e mantendo o state da UI sincronizado.
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-### React Router
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-O React Router é baseado em três componentes principais:
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
- - Router - Mantém a Interface do Usuário (UI) sincronizada com a URL.
- - Link - Renderiza um link de navegação (uma tag <a></a> que muda a URL sem dar refresh na página).
- - Route - Renderiza um componente de acordo com a URL.
-  
-Em relação às implementações do Router podemos escolher entre duas:
+## Learn More
 
- - BrowserRouter - Usa History API.
- - HashRouter - Usa hash presente na URL (obs: browser antigos).
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-## Links 
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-- Protótipo do projeto da semana: https://reprogramatechjobs.netlify.app/
-- Biblioteca Ant Design: https://ant.design/docs/react/introduce
-- React Router DOM: https://reacttraining.com/react-router/web/guides/quick-start
-- Netlify CLI: https://docs.netlify.com/cli/get-started/
+### Code Splitting
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+
+### Analyzing the Bundle Size
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+
+### Making a Progressive Web App
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+
+### Advanced Configuration
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+
+### Deployment
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+
+### `yarn build` fails to minify
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
