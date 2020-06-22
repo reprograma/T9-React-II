@@ -44,9 +44,13 @@ Em relação às implementações do Router podemos escolher entre duas:
  - BrowserRouter - Usa History API.
  - HashRouter - Usa hash presente na URL (obs: browser antigos).
 
-## Links 
+## Links Úteis
 
 - Protótipo do projeto da semana: https://reprogramatechjobs.netlify.app/
 - Biblioteca Ant Design: https://ant.design/docs/react/introduce
 - React Router DOM: https://reacttraining.com/react-router/web/guides/quick-start
 - Netlify CLI: https://docs.netlify.com/cli/get-started/
+- Atomic Design: https://bradfrost.com/blog/post/atomic-web-design/ | https://chocoladesign.com/blog/designsystems/atomic-design-e-a-componentizacao-de-interfaces/
+- Frontend Mentor: https://www.frontendmentor.io/
+
+- Pensando em React: https://pt-br.reactjs.org/docs/thinking-in-react.html  |  https://pt-br.reactjs.org/docs/glossary.html  |  https://www.youtube.com/watch?v=OArOQpY60Zk  |  https://www.youtube.com/playlist?list=PL-u8JWLN6xasnuyXzOFtkNfdEPOG-27nP
