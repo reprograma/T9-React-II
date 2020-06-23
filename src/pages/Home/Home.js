@@ -8,19 +8,51 @@ class Home extends Component {
     super();
 
     this.state = {
-      inputValue: ""
+      inputValue: "",
+      data: []
     };
   }
 
-  onClick = () => {
-    console.log("click");
+  componentDidMount = async () => {
+    console.log("O componente foi montado!!!");
+    const getData = await this.props.data;
+    this.setState({ data: getData });
+    console.log(this.state.data);
   };
 
-  onChange = () => {
-    console.log("mudou");
+  // componentDidUpdate = () => {
+
+  //   if(this.state.inputValue === ""){
+  //     this.setState({inputValue: "oi"})
+  //     console.log("O componente foi atualizado!!!");
+  //   }
+  // }
+
+  onClick = async () => {
+    const { inputValue, data } = this.state;
+
+    if (inputValue && data.length) {
+      const result = await data.filter(item =>
+        item.position.toLowerCase().includes(inputValue.toLowerCase())
+      );
+
+      console.log({ result });
+      this.setState({ inputValue: "" });
+    } else {
+      console.log("Sem input ou sem data");
+    }
+  };
+
+  onChange = e => {
+    const value = e.target.value;
+    console.log(value);
+    this.setState({ inputValue: value });
   };
 
   render() {
+    console.log("O Render foi chamado!!!");
+    const { inputValue, data } = this.state;
+    
     return (
       <GeneralTemplate>
         {/*Todos os componentes aqui dentro sao filhos (children) do General Template*/}
@@ -29,7 +61,8 @@ class Home extends Component {
           onClick={this.onClick}
           type="text"
           placeholder="O que voce procura?"
-          value={this.state.inputValue}
+          value={inputValue}
+          data={data}
           onChange={this.onChange}
         />
       </GeneralTemplate>
