@@ -52,9 +52,25 @@ class Home extends Component {
     this.setState({ inputValue: value });
   };
 
+  handleFilters = e => {
+    const { data } = this.props;
+    const value = e.target.id.toLowerCase();
+
+    const result = data.filter(item => {
+      switch (value) {
+        case "todos":
+          return item;
+        default:
+          return item.position.toLowerCase().includes(value);
+      }
+    });
+
+    this.setState({ data: result });
+  };
+
   render() {
     console.log("O Render foi chamado!!!");
-    const { inputValue, data } = this.state;
+    const { inputValue, data, filters } = this.state;
 
     return (
       <GeneralTemplate>
@@ -64,9 +80,12 @@ class Home extends Component {
           onClick={this.onClick}
           type="text"
           placeholder="O que voce procura?"
+          titulo="TechJobs"
           value={inputValue}
           data={data}
+          filters={filters}
           onChange={this.onChange}
+          handleFilters={this.handleFilters}
         />
       </GeneralTemplate>
     );

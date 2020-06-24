@@ -7,7 +7,7 @@ const FilterOptions = ({ filters, onClick }) => {
       {filters.map(item => {
         return (
           <div className="filterOptions--filter" onClick={onClick}>
-            <h3>{item}</h3>
+            <h3 id={item}>{item}</h3>
           </div>
         );
       })}

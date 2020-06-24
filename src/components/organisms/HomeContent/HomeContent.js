@@ -1,20 +1,25 @@
 import React from "react";
 import SearchBar from "../../molecules/SearchBar/SearchBar";
+import FilterBar from "../../molecules/FilterBar/FilterBar";
+import MainTitle from "../../atoms/MainTitle/MainTitle";
 import Card from "../../molecules/Card/Card";
 import "./homeContent.css";
 
 const HomeContent = ({
   texto,
+  titulo,
   onClick,
+  handleFilters,
   type,
   placeholder,
   value,
   onChange,
-  data
+  data,
+  filters
 }) => {
   return (
-    <main>
-      <h1>TechJobs</h1>
+    <main className="homeContent--container">
+      <MainTitle texto={titulo}/>
       <section>
         <SearchBar
           texto={texto}
@@ -24,9 +29,7 @@ const HomeContent = ({
           value={value}
           onChange={onChange}
         />
-        <div>
-          <h2>FILTROS</h2>
-        </div>
+        <FilterBar filters={filters} onClick={handleFilters} />
       </section>
       <section>
         {data.length ? (
