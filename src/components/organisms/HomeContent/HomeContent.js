@@ -29,7 +29,7 @@ const HomeContent = ({
         </div>
       </section>
       <section>
-        {data ? (
+        {data.length ? (
           data.map(item => {
             const {
               logo,
