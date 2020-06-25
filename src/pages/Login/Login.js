@@ -4,6 +4,14 @@ import LoginContent from "../../components/organisms/LoginContent/LoginContent";
 import "./login.css";
 
 class Login extends Component {
+  constructor(){
+    super();
+
+    this.state={
+      
+    }
+  }
+
   render() {
     return (
       <GeneralTemplate>

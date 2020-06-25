@@ -10,4 +10,6 @@ const LoginContent = ({ titulo }) => {
   );
 };
 
+
+
 export default LoginContent;
