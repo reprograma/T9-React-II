@@ -9,7 +9,9 @@ class Home extends Component {
 
     this.state = {
       inputValue: "",
-      data: []
+      //esse array data é mutável
+      data: [],
+      filters: ["Todos", "Front", "Back", "Design", "Junior", "Pleno", "Senior"]
     };
   }
 
@@ -29,7 +31,8 @@ class Home extends Component {
   // }
 
   onClick = async () => {
-    const { inputValue, data } = this.state;
+    const { inputValue } = this.state;
+    const { data } = this.props; //imutável
 
     if (inputValue && data.length) {
       const result = await data.filter(item =>
@@ -37,9 +40,9 @@ class Home extends Component {
       );
 
       console.log({ result });
-      this.setState({ inputValue: "" });
+      this.setState({ inputValue: "", data: result });
     } else {
-      console.log("Sem input ou sem data");
+      console.log({ data });
     }
   };
 
@@ -49,10 +52,26 @@ class Home extends Component {
     this.setState({ inputValue: value });
   };
 
+  handleFilters = e => {
+    const { data } = this.props;
+    const value = e.target.id.toLowerCase();
+
+    const result = data.filter(item => {
+      switch (value) {
+        case "todos":
+          return item;
+        default:
+          return item.position.toLowerCase().includes(value);
+      }
+    });
+
+    this.setState({ data: result });
+  };
+
   render() {
     console.log("O Render foi chamado!!!");
-    const { inputValue, data } = this.state;
-    
+    const { inputValue, data, filters } = this.state;
+
     return (
       <GeneralTemplate>
         {/*Todos os componentes aqui dentro sao filhos (children) do General Template*/}
@@ -61,9 +80,12 @@ class Home extends Component {
           onClick={this.onClick}
           type="text"
           placeholder="O que voce procura?"
+          titulo="TechJobs"
           value={inputValue}
           data={data}
+          filters={filters}
           onChange={this.onChange}
+          handleFilters={this.handleFilters}
         />
       </GeneralTemplate>
     );
