@@ -12,10 +12,14 @@ class Login extends Component {
     }
   }
 
+  onFinish = (value) => {
+    console.log("Dados enviados", value);
+  }
+
   render() {
     return (
       <GeneralTemplate>
-        <LoginContent titulo="Acesse sua conta" />
+        <LoginContent titulo="Acesse sua conta" onFinish={this.onFinish}/>
       </GeneralTemplate>
     );
   }
