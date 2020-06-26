@@ -1,26 +1,21 @@
 import React, { Component } from "react";
 import GeneralTemplate from "../../templates/GeneralTemplate/GeneralTemplate";
-import LoginContent from "../../components/organisms/LoginContent/LoginContent";
-import "./login.css";
+import SignUpContent from "../../components/organisms/SignUpContent/SignUpContent";
+import "./signUp.css";
 
-class Login extends Component {
-  constructor() {
-    super();
-
-    this.state = {};
-  }
-
-  onFinish = value => {
-    console.log("Dados enviados", value);
+class SignUp extends Component {
+  onFinish = values => {
+    console.log("Dados cadastrados", values);
     this.props.history.push("/");
   };
 
   render() {
     const { login, loggedUser } = this.props;
+
     return (
       <GeneralTemplate loggedUser={loggedUser}>
-        <LoginContent
-          titulo="Acesse sua conta"
+        <SignUpContent
+          texto="Crie sua conta"
           onFinish={this.onFinish}
           login={login}
         />
@@ -29,4 +24,4 @@ class Login extends Component {
   }
 }
 
-export default Login;
+export default SignUp;
