@@ -33,7 +33,7 @@ const HomeContent = ({
       </section>
       <section>
         {data.length ? (
-          data.map(item => {
+          data.map((item, index) => {
             const {
               logo,
               company,
@@ -46,6 +46,7 @@ const HomeContent = ({
             } = item;
             return (
               <Card
+                key={`${index + 1}--card`}
                 logo={logo}
                 company={company}
                 position={position}

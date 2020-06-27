@@ -5,7 +5,6 @@ import "./signUp.css";
 
 class SignUp extends Component {
   onFinish = values => {
-    console.log("Dados cadastrados", values);
     this.props.history.push("/");
   };
 
