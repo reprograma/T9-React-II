@@ -16,19 +16,9 @@ class Home extends Component {
   }
 
   componentDidMount = async () => {
-    console.log("O componente foi montado!!!");
     const getData = await this.props.data;
     this.setState({ data: getData });
-    console.log(this.state.data);
   };
-
-  // componentDidUpdate = () => {
-
-  //   if(this.state.inputValue === ""){
-  //     this.setState({inputValue: "oi"})
-  //     console.log("O componente foi atualizado!!!");
-  //   }
-  // }
 
   onClick = async () => {
     const { inputValue } = this.state;
@@ -38,17 +28,12 @@ class Home extends Component {
       const result = await data.filter(item =>
         item.position.toLowerCase().includes(inputValue.toLowerCase())
       );
-
-      console.log({ result });
       this.setState({ inputValue: "", data: result });
-    } else {
-      console.log({ data });
     }
   };
 
   onChange = e => {
     const value = e.target.value;
-    console.log(value);
     this.setState({ inputValue: value });
   };
 
@@ -69,7 +54,6 @@ class Home extends Component {
   };
 
   render() {
-    console.log("O Render foi chamado!!!");
     const { inputValue, data, filters } = this.state;
     const {logout, loggedUser} = this.props;
 

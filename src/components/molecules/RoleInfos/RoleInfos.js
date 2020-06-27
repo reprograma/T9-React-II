@@ -5,17 +5,17 @@ const RoleInfos = ({ languages, tools }) => {
   return (
     <div className="roleInfos--container">
       {languages &&
-        languages.map(item => {
+        languages.map((item, index) => {
           return (
-            <div>
+            <div key={`${index + 1}--language`}>
               <h2>{item}</h2>
             </div>
           );
         })}
       {tools &&
-        tools.map(item => {
+        tools.map((item, index) => {
           return (
-            <div>
+            <div key={`${index + 1}--tool`}>
               <h2>{item}</h2>
             </div>
           );
