@@ -49,7 +49,7 @@ Em relação às implementações do Router podemos escolher entre duas:
 - Protótipo do projeto da semana: https://reprogramatechjobs.netlify.app/
 - Biblioteca Ant Design: https://ant.design/docs/react/introduce
 - React Router DOM: https://reacttraining.com/react-router/web/guides/quick-start
-- Netlify CLI: https://docs.netlify.com/cli/get-started/
+- Netlify CLI: https://docs.netlify.com/cli/get-started/ | https://www.netlify.com/blog/2016/07/22/deploy-react-apps-in-less-than-30-seconds/
 - Atomic Design: https://bradfrost.com/blog/post/atomic-web-design/ | https://chocoladesign.com/blog/designsystems/atomic-design-e-a-componentizacao-de-interfaces/
 - Frontend Mentor: https://www.frontendmentor.io/
 
